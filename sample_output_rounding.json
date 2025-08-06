@@ -1,0 +1,14 @@
+{
+  "allocations": [
+    {
+      "id": "A1",
+      "assignedDiscount": 5817.41,
+      "justification": "Top performer"
+    },
+    {
+      "id": "A2",
+      "assignedDiscount": 4183.59,
+      "justification": "Needs improvement across performance, targets, and client engagement"
+    }
+  ]
+}

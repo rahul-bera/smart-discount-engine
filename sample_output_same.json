@@ -1,0 +1,19 @@
+{
+  "allocations": [
+    {
+      "id": "A1",
+      "assignedDiscount": 3333.33,
+      "justification": "General contribution with stable output"
+    },
+    {
+      "id": "A2",
+      "assignedDiscount": 3333.33,
+      "justification": "General contribution with stable output"
+    },
+    {
+      "id": "A3",
+      "assignedDiscount": 3333.33,
+      "justification": "General contribution with stable output"
+    }
+  ]
+}

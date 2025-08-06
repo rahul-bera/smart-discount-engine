@@ -1,0 +1,19 @@
+{
+  "allocations": [
+    {
+      "id": "A1",
+      "assignedDiscount": 4235.61,
+      "justification": "Consistently high performance and long-term contribution"
+    },
+    {
+      "id": "A2",
+      "assignedDiscount": 2758.7,
+      "justification": "General contribution with stable output"
+    },
+    {
+      "id": "A3",
+      "assignedDiscount": 3005.69,
+      "justification": "General contribution with stable output"
+    }
+  ]
+}

@@ -1,56 +1,59 @@
 # Smart Discount Allocation Engine
 
-Distributes a ₹10,000 kitty among sales agents based on:
-- `performanceScore`
-- `seniorityMonths`
-- `targetAchievedPercent`
-- `activeClients`
-
-Each feature gets ₹2,500. Agents earn proportionally based on their scores.
+A Python-based system to fairly distribute a fixed discount amount (₹10,000) among multiple sales agents based on performance-related metrics.
 
 ---
 
-##  Features
-- Fair, mathematical distribution
-- Feature-wise breakdown
-- Professional justifications
-- Easy JSON-based input
+##  Approach
+
+- The total discount kitty is split **equally across all input features**.
+- For each feature, agents are awarded a **proportional share** of that portion.
+- The final score is the **sum of each agent’s shares** across all features.
+- Justification messages are generated based on a rule-based performance evaluation.
+- Any rounding difference is adjusted by assigning the remaining amount to the first agent.
 
 ---
 
-##  Run the Project
+##  Assumptions Made
 
+- The total kitty (₹10,000) is constant and split evenly across all features.
+- All agents contain valid numeric scores for each of the following fields:
+  - `performanceScore`
+  - `seniorityMonths`
+  - `targetAchievedPercent`
+  - `activeClients`
+  - `customerFeedback`
+  - `bonusClosedDeals`
+- The input JSON is properly formatted.
+- All agents have unique `id` fields.
+
+---
+
+## How to Run
+```
+
+###  Run Program:
 ```bash
 python main.py
 ```
-
-You’ll get:
-- Agent ID
-- Total discount
-- Breakdown per feature
-- Justification
-
----
-
-##  Run Tests
-
-```bash
-python test_engine.py
+You’ll be prompted to choose from 3 input test cases:
+```
+1. sample_input_normal.json
+2. sample_input_same.json
+3. sample_input_rounding.json
 ```
 
----
 
-##  Add Agents
-
-Edit `sample_input.json`:
-
+###  Output Format
 ```json
-{ "id": "A9", "performanceScore": 72, "seniorityMonths": 10, "targetAchievedPercent": 80, "activeClients": 9 }
+{
+  "allocations": [
+    {
+      "id": "A1",
+      "assignedDiscount": 4235.61,
+      "justification": "Consistently high performance and long-term contribution"
+    },
+    ...
+  ]
+}
 ```
-
----
-
-## 📌 Use Cases
-- Internal reward systems
-- Recruiter tools
-- Transparent field performance reviews
